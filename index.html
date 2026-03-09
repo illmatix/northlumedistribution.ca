@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="North Lume Distribution - Your trusted partner in product distribution across Canada, USA, and Brazil."
+    />
+    <title>North Lume Distribution</title>
+
+    <!-- Canonical (updated dynamically by router) -->
+    <link rel="canonical" href="https://northlumedistribution.ca/" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="North Lume Distribution" />
+    <meta
+      property="og:description"
+      content="Your trusted partner in product distribution across Canada, USA, and Brazil."
+    />
+    <meta property="og:image" content="https://northlumedistribution.ca/og-image.png" />
+    <meta property="og:url" content="https://northlumedistribution.ca" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="North Lume Distribution" />
+    <meta
+      name="twitter:description"
+      content="Your trusted partner in product distribution across Canada, USA, and Brazil."
+    />
+    <meta name="twitter:image" content="https://northlumedistribution.ca/og-image.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HX3R7GECKL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HX3R7GECKL', { send_page_view: false });
+    </script>
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "North Lume Distribution",
+      "url": "https://northlumedistribution.ca",
+      "logo": "https://northlumedistribution.ca/og-image.png",
+      "description": "Your trusted partner in product distribution across Canada, USA, and Brazil.",
+      "areaServed": [
+        { "@type": "Country", "name": "Canada" },
+        { "@type": "Country", "name": "United States" },
+        { "@type": "Country", "name": "Brazil" }
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "url": "https://northlumedistribution.ca/contact"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "North Lume Distribution",
+      "url": "https://northlumedistribution.ca",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://northlumedistribution.ca/products?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+  </head>
+  <body class="min-h-screen bg-white font-sans text-gray-900 antialiased">
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

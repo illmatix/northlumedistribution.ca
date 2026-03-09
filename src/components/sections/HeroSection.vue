@@ -1,0 +1,48 @@
+<template>
+  <section class="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-900 to-accent-950 py-24 sm:py-32">
+    <!-- Layer 1: Dot pattern -->
+    <div
+      class="pointer-events-none absolute inset-0 opacity-[0.15]"
+      aria-hidden="true"
+      :style="{ backgroundImage: dotPattern, backgroundSize: '24px 24px' }"
+    ></div>
+
+    <!-- Layer 2: Gradient overlay for depth -->
+    <div
+      class="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-950/0 via-brand-950/30 to-brand-950/60"
+      aria-hidden="true"
+    ></div>
+
+    <!-- Layer 3: Content -->
+    <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          Reliable Product Distribution Across Canada, USA &amp; Brazil
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-brand-100">
+          With over 8 years of experience, North Lume Distribution supplies high-quality products to
+          gas stations, convenience stores, supermarkets, and retail businesses. We handle the
+          logistics so you can focus on growing your business.
+        </p>
+        <div class="mt-10 flex items-center justify-center gap-x-6">
+          <router-link
+            to="/contact"
+            class="rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400"
+          >
+            Get in Touch
+          </router-link>
+          <router-link
+            to="/products"
+            class="text-sm font-semibold leading-6 text-brand-200 transition-colors hover:text-white"
+          >
+            View Products <span aria-hidden="true">&rarr;</span>
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup>
+const dotPattern = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='12' cy='12' r='1.5' fill='%2314b8a6'/%3E%3C/svg%3E")`;
+</script>

@@ -1,0 +1,258 @@
+{
+  "categories": [
+    {
+      "name": "Electronics & Tech",
+      "slug": "electronics-tech",
+      "brands": [
+        {
+          "name": "Volt",
+          "slug": "volt",
+          "description": "Volt Elite V3 premium cables, earbuds, aux cords, and chargers. Volt Evolution 4-in-1 Tuff fast charge cables in 4ft, 6ft, and 10ft.",
+          "featured": true,
+          "pages": [
+            { "src": "/images/products/volt/page-01.webp", "alt": "Volt Elite V3" },
+            { "src": "/images/products/volt/page-02.webp", "alt": "Volt Evolution" }
+          ]
+        },
+        {
+          "name": "Tech 361",
+          "slug": "tech-361",
+          "description": "36pc counter display kit with Type C, braided iPhone, braided Micro USB cables, plus wall and car chargers.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/tech-361/page-01.webp", "alt": "Tech 361" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Candy & Confections",
+      "slug": "candy-confections",
+      "brands": [
+        {
+          "name": "Sour Rockstar Roll Licker",
+          "slug": "sour-rockstar",
+          "description": "Sour liquid roller candy, 75ml per piece. 12 pcs per display, 8 displays per case.",
+          "featured": true,
+          "pages": [
+            { "src": "/images/products/sour-rockstar/page-01.webp", "alt": "Sour Rockstar Roll Licker" }
+          ]
+        },
+        {
+          "name": "Gorilla Squeeze Duo",
+          "slug": "gorilla-squeeze",
+          "description": "Sour gel slime candy in Blue Razz and Strawberry. 56ml dual-flavour package.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/gorilla-squeeze/page-01.webp", "alt": "Gorilla Squeeze Duo" }
+          ]
+        },
+        {
+          "name": "TNT Sour Stix",
+          "slug": "tnt-sour-stix",
+          "description": "Explosive sour candy sticks in a variety of flavors.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/tnt-sour-stix/page-14.webp", "alt": "TNT Sour Stix" }
+          ]
+        },
+        {
+          "name": "Squeeze Team Heroes",
+          "slug": "squeeze-team-heroes",
+          "description": "Hero-themed squeezable candy for kids.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/squeeze-team-heroes/page-15.webp", "alt": "Squeeze Team Heroes" }
+          ]
+        },
+        {
+          "name": "Cheeky Monkey Candy Co.",
+          "slug": "cheeky-monkey",
+          "description": "Gummies and Sours candy cones in mixed flavors. 96pc floor shipper kit.",
+          "featured": true,
+          "pages": [
+            { "src": "/images/products/cheeky-monkey/page-01.webp", "alt": "Cheeky Monkey Candy Co." }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Food & Snacks",
+      "slug": "food-snacks",
+      "brands": [
+        {
+          "name": "Zaks Jerky",
+          "slug": "zaks-jerky",
+          "description": "Premium Black Angus beef jerky. Traditional 120g in four bold flavors plus 120g Big Bag varieties.",
+          "featured": true,
+          "pages": [
+            { "src": "/images/products/zaks-jerky/page-01.webp", "alt": "Zaks Jerky Traditional 120g" },
+            { "src": "/images/products/zaks-jerky/page-02.webp", "alt": "Zaks Beef Jerky" }
+          ]
+        },
+        {
+          "name": "The Butcher",
+          "slug": "the-butcher",
+          "description": "Locally made 90g beef jerky in Original, Teriyaki, Hot 'N Sweet, and Hickory Smoke. 80pc shipper kit.",
+          "featured": true,
+          "pages": [
+            { "src": "/images/products/the-butcher/page-01.webp", "alt": "The Butcher Beef Jerky" }
+          ]
+        },
+        {
+          "name": "Kokum Beef Jerky",
+          "slug": "kokum",
+          "description": "Indigenous-owned Kokum beef jerky in 75g and 175g sizes.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/kokum/page-47.webp", "alt": "Kokum Beef Jerky 75g" },
+            { "src": "/images/products/kokum/page-49.webp", "alt": "Kokum Beef Jerky 175g" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Toys & Novelties",
+      "slug": "toys-novelties",
+      "brands": [
+        {
+          "name": "Die Cast Cars",
+          "slug": "die-cast-cars",
+          "description": "Officially licensed die-cast cars with real logos, rubber tires, pull-back action, and opening doors. Over 150 models.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/die-cast-cars/page-01.webp", "alt": "Die Cast Cars" }
+          ]
+        },
+        {
+          "name": "3D Minis & Creatures",
+          "slug": "3d-minis-creatures",
+          "description": "Collectible 3D-printed mini figures and articulated creature toys. 110pc floor display kit.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/3d-minis-creatures/page-01.webp", "alt": "3D Minis & Creatures page 1" },
+            { "src": "/images/products/3d-minis-creatures/page-02.webp", "alt": "3D Minis & Creatures page 2" }
+          ]
+        },
+        {
+          "name": "Warp Worm",
+          "slug": "warp-worm",
+          "description": "Warp Worm novelty toys and fidget items.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/warp-worm/page-32.webp", "alt": "Warp Worm page 1" },
+            { "src": "/images/products/warp-worm/page-33.webp", "alt": "Warp Worm page 2" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "brands": [
+        {
+          "name": "Charm Buddies",
+          "slug": "charm-buddies",
+          "description": "Collectible bag charms on a 96pc countertop spinner rack with fun designs.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/charm-buddies/page-01.webp", "alt": "Charm Buddies" }
+          ]
+        },
+        {
+          "name": "Cool Tats",
+          "slug": "cool-tats",
+          "description": "Temporary tattoos in full, half, and small sizes. 120pc floor display with over 100 designs.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/cool-tats/page-01.webp", "alt": "Cool Tats" }
+          ]
+        },
+        {
+          "name": "Sticker Kraze",
+          "slug": "sticker-kraze",
+          "description": "Bamboo stickers made with real wood. Unique vintage look, 2 to 3 inches. 120pc counter display.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/sticker-kraze/page-01.webp", "alt": "Sticker Kraze" }
+          ]
+        },
+        {
+          "name": "Bag Swag",
+          "slug": "bag-swag",
+          "description": "Trendy bag accessories and decorative swag.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/bag-swag/page-26.webp", "alt": "Bag Swag" }
+          ]
+        },
+        {
+          "name": "Keysteez",
+          "slug": "keysteez",
+          "description": "Stylish keychains and keyring accessories.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/keysteez/page-27.webp", "alt": "Keysteez" }
+          ]
+        },
+        {
+          "name": "Retro Rattlers",
+          "slug": "retro-rattlers",
+          "description": "Retro-styled sunglasses with color-shifting revo lenses and adjustable ear loops. 48pc floor shipper.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/retro-rattlers/page-01.webp", "alt": "Retro Rattlers" }
+          ]
+        },
+        {
+          "name": "Fancy Fannys",
+          "slug": "fancy-fannys",
+          "description": "Stylish fanny packs and waist bags.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/fancy-fannys/page-29.webp", "alt": "Fancy Fannys" }
+          ]
+        },
+        {
+          "name": "Card Guard",
+          "slug": "card-guard",
+          "description": "Protective card holders and RFID-blocking wallets.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/card-guard/page-30.webp", "alt": "Card Guard" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Pet",
+      "slug": "pet",
+      "brands": [
+        {
+          "name": "Bones Premium Pet Treats",
+          "slug": "bones",
+          "description": "All-natural premium pet treats: bully sticks, beef trachea, beef sticks, braided beef, cow ears, and pig ears. 210pc display kit.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/bones/page-01.webp", "alt": "Bones Premium Pet Treats" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Outdoor",
+      "slug": "outdoor",
+      "brands": [
+        {
+          "name": "Campers Campfire Sticks",
+          "slug": "campers",
+          "description": "34-inch campfire roasting sticks with 10-gauge twisted steel and wooden handles. 55pc shipper kit.",
+          "featured": false,
+          "pages": [
+            { "src": "/images/products/campers/page-01.webp", "alt": "Campers Campfire Sticks" }
+          ]
+        }
+      ]
+    }
+  ]
+}
