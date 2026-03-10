@@ -96,7 +96,7 @@ function setMeta(name, content, attr = 'name') {
 function updateHreflangTags(to) {
   document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
 
-  const pathWithoutLocale = to.fullPath.replace(/^\/(en|fr|pt-br)/, '') || '/';
+  const pathWithoutLocale = to.fullPath.replace(/^\/(en|fr|pt-br|es)/, '') || '/';
 
   for (const loc of SUPPORTED_LOCALES) {
     const link = document.createElement('link');
@@ -147,7 +147,7 @@ router.afterEach((to) => {
     setMeta('og:description', description, 'property');
   }
 
-  const ogLocaleMap = { en: 'en_US', fr: 'fr_CA', 'pt-br': 'pt_BR' };
+  const ogLocaleMap = { en: 'en_US', fr: 'fr_CA', 'pt-br': 'pt_BR', es: 'es_ES' };
   setMeta('og:locale', ogLocaleMap[locale] || 'en_US', 'property');
 
   // Hreflang

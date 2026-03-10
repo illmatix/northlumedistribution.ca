@@ -1,0 +1,190 @@
+{
+  "common": {
+    "skip_to_content": "Ir al contenido principal"
+  },
+  "nav": {
+    "home": "Inicio",
+    "products": "Productos",
+    "contact": "Contacto"
+  },
+  "footer": {
+    "products": "Productos",
+    "contact": "Contacto",
+    "privacy": "Política de privacidad",
+    "terms": "Condiciones de servicio",
+    "copyright": "North Lume Distribution. Todos los derechos reservados."
+  },
+  "hero": {
+    "title": "Distribución fiable de productos en Canadá, EE. UU. y Brasil",
+    "subtitle": "Con más de 8 años de experiencia, North Lume Distribution suministra productos de alta calidad a gasolineras, tiendas de conveniencia, supermercados y comercios minoristas. Nosotros nos encargamos de la logística para que vosotros podáis centraros en hacer crecer vuestro negocio.",
+    "cta_primary": "Contactadnos",
+    "cta_secondary": "Ver productos"
+  },
+  "about": {
+    "title": "Quiénes somos",
+    "p1": "Trabajamos directamente con marcas y fabricantes para ofrecer una selección cuidada de productos al mercado minorista. Desde electrónica y golosinas hasta juguetes y accesorios, nuestro catálogo abarca siete categorías — con stock listo para enviar.",
+    "p2": "Tanto si sois una marca en crecimiento que busca mayor alcance como un comercio que necesita un socio de suministro fiable, adaptamos nuestro enfoque a vuestro negocio. Precios competitivos, inventario constante y atención personalizada son parte de nuestro servicio."
+  },
+  "stats": {
+    "years": "Años de experiencia",
+    "products": "Productos distribuidos",
+    "countries": "Países atendidos",
+    "categories": "Categorías de productos"
+  },
+  "featured": {
+    "title": "Productos destacados",
+    "subtitle": "Un vistazo a algunas de las marcas que distribuimos.",
+    "view_all": "Ver todos los productos"
+  },
+  "contact_cta": {
+    "title": "¿Listos para abasteceros?",
+    "subtitle": "Decidnos qué necesitáis — nosotros nos encargamos del resto.",
+    "button": "Contactadnos"
+  },
+  "products_page": {
+    "title": "Nuestros productos",
+    "subtitle": "North Lume Distribution ofrece una amplia gama de productos en múltiples categorías. Explorad nuestro catálogo para descubrir lo que podemos llevar a vuestras estanterías.",
+    "search_placeholder": "Buscar productos, marcas, categorías...",
+    "all_categories": "Todas las categorías",
+    "all_brands": "Todas las marcas",
+    "brand_found": "{count} marca encontrada",
+    "brands_found": "{count} marcas encontradas",
+    "clear_all": "Borrar todo",
+    "no_results": "No se han encontrado productos",
+    "no_results_hint": "Probad a ajustar vuestra búsqueda o filtros.",
+    "clear_filters": "Borrar todos los filtros"
+  },
+  "contact_page": {
+    "title": "Contacto",
+    "subtitle": "¿Buscáis un socio de distribución en Canadá, EE. UU. o Brasil? Contadnos sobre vuestro negocio y nos pondremos en contacto con vosotros.",
+    "email_label": "Correo electrónico",
+    "form_name": "Nombre",
+    "form_email": "Correo electrónico",
+    "form_phone": "Teléfono",
+    "form_phone_optional": "(opcional)",
+    "form_message": "Mensaje",
+    "form_submit": "Enviar mensaje",
+    "form_submitting": "Enviando...",
+    "success_title": "¡Mensaje enviado!",
+    "success_body": "Gracias por poneros en contacto. Os responderemos lo antes posible.",
+    "success_reset": "Enviar otro mensaje",
+    "error_generic": "Ha ocurrido un error. Por favor, intentadlo de nuevo.",
+    "error_network": "Error de red. Comprobad vuestra conexión e intentadlo de nuevo.",
+    "email_subject": "Nuevo contacto de {name} — North Lume Distribution"
+  },
+  "not_found": {
+    "title": "Página no encontrada",
+    "body": "Lo sentimos, no hemos podido encontrar la página que buscáis.",
+    "go_home": "Ir al inicio",
+    "view_products": "Ver productos"
+  },
+  "cookie_consent": {
+    "message": "Utilizamos cookies y Google Analytics para comprender cómo los visitantes usan nuestro sitio. No se venden ni comparten datos personales.",
+    "privacy_link": "Política de privacidad",
+    "decline": "Rechazar",
+    "accept": "Aceptar"
+  },
+  "lightbox": {
+    "close": "Cerrar",
+    "previous": "Imagen anterior",
+    "next": "Imagen siguiente"
+  },
+  "legal": {
+    "privacy_title": "Política de privacidad",
+    "terms_title": "Condiciones de servicio",
+    "last_updated": "Última actualización: 9 de marzo de 2026"
+  },
+  "categories": {
+    "electronics-tech": "Electrónica y tecnología",
+    "candy-confections": "Caramelos y confitería",
+    "food-snacks": "Alimentación y aperitivos",
+    "toys-novelties": "Juguetes y novedades",
+    "accessories": "Accesorios",
+    "pet": "Mascotas",
+    "outdoor": "Aire libre"
+  },
+  "brands": {
+    "volt": {
+      "description": "Cables premium Volt Elite V3, auriculares, cables auxiliares y cargadores. Cables de carga rápida Volt Evolution 4 en 1 Tuff en 1,2 m, 1,8 m y 3 m."
+    },
+    "tech-361": {
+      "description": "Kit de expositor de mostrador de 36 piezas con cables Type C, iPhone trenzado, Micro USB trenzado, además de cargadores de pared y coche."
+    },
+    "sour-rockstar": {
+      "description": "Caramelo líquido ácido en rodillo, 75 ml por unidad. 12 unidades por expositor, 8 expositores por caja."
+    },
+    "gorilla-squeeze": {
+      "description": "Caramelo de gel ácido en Blue Razz y fresa. Envase de doble sabor de 56 ml."
+    },
+    "tnt-sour-stix": {
+      "description": "Barritas de caramelo ácido explosivas en una variedad de sabores."
+    },
+    "squeeze-team-heroes": {
+      "description": "Caramelo exprimible con temática de superhéroes para niños."
+    },
+    "cheeky-monkey": {
+      "description": "Conos de gominolas y caramelos ácidos en sabores surtidos. Kit de expositor de suelo de 96 unidades."
+    },
+    "zaks-jerky": {
+      "description": "Cecina premium de ternera Black Angus. Traditional de 120 g en cuatro sabores intensos y variedades Big Bag de 120 g."
+    },
+    "the-butcher": {
+      "description": "Cecina de ternera artesanal de 90 g en Original, Teriyaki, Hot 'N Sweet e Hickory Smoke. Kit de expositor de 80 unidades."
+    },
+    "kokum": {
+      "description": "Cecina de ternera Kokum de producción indígena en formatos de 75 g y 175 g."
+    },
+    "die-cast-cars": {
+      "description": "Coches de fundición a presión con licencia oficial, logotipos reales, neumáticos de goma, retroceso y puertas que se abren. Más de 150 modelos."
+    },
+    "3d-minis-creatures": {
+      "description": "Figuras coleccionables en miniatura impresas en 3D y juguetes articulados de criaturas. Kit de expositor de suelo de 110 unidades."
+    },
+    "warp-worm": {
+      "description": "Juguetes de novedad Warp Worm y artículos fidget."
+    },
+    "charm-buddies": {
+      "description": "Colgantes coleccionables para bolsos en expositor giratorio de mostrador de 96 unidades con diseños divertidos."
+    },
+    "cool-tats": {
+      "description": "Tatuajes temporales en tamaños completo, medio y pequeño. Expositor de suelo de 120 unidades con más de 100 diseños."
+    },
+    "sticker-kraze": {
+      "description": "Pegatinas de bambú fabricadas con madera auténtica. Aspecto vintage único, de 5 a 8 cm. Expositor de mostrador de 120 unidades."
+    },
+    "bag-swag": {
+      "description": "Accesorios de moda y adornos decorativos para bolsos."
+    },
+    "keysteez": {
+      "description": "Llaveros y accesorios con estilo para llaves."
+    },
+    "retro-rattlers": {
+      "description": "Gafas de sol de estilo retro con lentes revo de cambio de color y patillas ajustables. Expositor de suelo de 48 unidades."
+    },
+    "fancy-fannys": {
+      "description": "Riñoneras y bolsos de cintura con estilo."
+    },
+    "card-guard": {
+      "description": "Fundas protectoras para tarjetas y carteras con bloqueo RFID."
+    },
+    "bones": {
+      "description": "Premios naturales para mascotas: palitos de nervio, tráquea de ternera, palitos de ternera, ternera trenzada, orejas de vaca y orejas de cerdo. Kit de expositor de 210 unidades."
+    },
+    "campers": {
+      "description": "Palos de asar para hoguera de 86 cm con acero trenzado de calibre 10 y mangos de madera. Kit de expositor de 55 unidades."
+    }
+  },
+  "seo": {
+    "home_title": "North Lume Distribution | Distribución de productos en Canadá, EE. UU. y Brasil",
+    "home_description": "North Lume Distribution suministra más de 23 productos en siete categorías a comercios minoristas en Canadá, EE. UU. y Brasil.",
+    "products_title": "Nuestros productos | North Lume Distribution",
+    "products_description": "Explorad nuestro catálogo completo — electrónica, caramelos, aperitivos, juguetes, accesorios, productos para mascotas y artículos de aire libre de más de 23 marcas.",
+    "contact_title": "Contacto | North Lume Distribution",
+    "contact_description": "Poneos en contacto para iniciar una colaboración mayorista o preguntarnos sobre nuestras líneas de productos. Estaremos encantados de atenderos.",
+    "privacy_title": "Política de privacidad | North Lume Distribution",
+    "privacy_description": "Descubrid cómo North Lume Distribution recoge, utiliza y protege vuestra información.",
+    "terms_title": "Condiciones de servicio | North Lume Distribution",
+    "terms_description": "Condiciones de servicio del sitio web de North Lume Distribution.",
+    "not_found_title": "404 — Página no encontrada | North Lume Distribution"
+  }
+}
