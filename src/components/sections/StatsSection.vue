@@ -8,7 +8,7 @@
         preserveAspectRatio="none"
         class="block h-8 w-full sm:h-12"
       >
-        <path d="M0 48h1440V24C1200 0 960 0 720 24 480 48 240 48 0 24v24z" fill="white" />
+        <path d="M0 0h1440v24C1200 48 960 48 720 24 480 0 240 0 0 24V0z" fill="white" />
       </svg>
     </div>
 
