@@ -2,6 +2,7 @@
   <div>
     <HeroSection />
     <AboutSection />
+    <StatsSection />
     <FeaturedProducts />
     <ContactSection />
   </div>
@@ -11,6 +12,7 @@
 import { onMounted, onUnmounted } from 'vue';
 import HeroSection from '@/components/sections/HeroSection.vue';
 import AboutSection from '@/components/sections/AboutSection.vue';
+import StatsSection from '@/components/sections/StatsSection.vue';
 import FeaturedProducts from '@/components/sections/FeaturedProducts.vue';
 import ContactSection from '@/components/sections/ContactSection.vue';
 import { trackEvent } from '@/composables/useAnalytics';

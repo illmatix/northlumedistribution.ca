@@ -10,13 +10,26 @@
       :style="{ backgroundImage: dotPattern, backgroundSize: '24px 24px' }"
     ></div>
 
-    <!-- Layer 2: Gradient overlay for depth -->
+    <!-- Layer 2: Floating geometric shapes -->
+    <div class="pointer-events-none absolute inset-0" aria-hidden="true">
+      <div
+        class="absolute -left-16 top-1/4 h-64 w-64 animate-float rounded-full bg-accent-500/[0.07] blur-2xl"
+      ></div>
+      <div
+        class="absolute -right-20 top-1/3 h-80 w-80 animate-float-slow rounded-full bg-brand-400/[0.08] blur-2xl"
+      ></div>
+      <div
+        class="absolute bottom-1/4 left-1/3 h-48 w-48 animate-float-slower rounded-full bg-accent-400/[0.06] blur-xl"
+      ></div>
+    </div>
+
+    <!-- Layer 3: Gradient overlay for depth -->
     <div
       class="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-950/0 via-brand-950/30 to-brand-950/60"
       aria-hidden="true"
     ></div>
 
-    <!-- Layer 3: Content -->
+    <!-- Layer 4: Content -->
     <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
         <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
@@ -44,6 +57,18 @@
           </router-link>
         </div>
       </div>
+    </div>
+
+    <!-- Wave divider -->
+    <div class="absolute inset-x-0 -bottom-px" aria-hidden="true">
+      <svg
+        viewBox="0 0 1440 48"
+        fill="none"
+        preserveAspectRatio="none"
+        class="block h-8 w-full sm:h-12"
+      >
+        <path d="M0 0h1440v24C1200 48 960 48 720 24 480 0 240 0 0 24V0z" fill="white" />
+      </svg>
     </div>
   </section>
 </template>
