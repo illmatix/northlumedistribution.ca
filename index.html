@@ -47,14 +47,7 @@
       rel="stylesheet"
     />
 
-    <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HX3R7GECKL"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-HX3R7GECKL', { send_page_view: false });
-    </script>
+    <!-- GA4 is loaded dynamically after cookie consent (see src/composables/useConsent.js) -->
 
     <!-- JSON-LD: Organization -->
     <script type="application/ld+json">

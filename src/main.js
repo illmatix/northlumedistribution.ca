@@ -37,6 +37,25 @@ const routes = [
     },
   },
   {
+    path: '/privacy',
+    name: 'privacy',
+    component: () => import('./pages/PrivacyPage.vue'),
+    meta: {
+      title: 'Privacy Policy | North Lume Distribution',
+      description:
+        'Learn how North Lume Distribution collects, uses, and protects your information.',
+    },
+  },
+  {
+    path: '/terms',
+    name: 'terms',
+    component: () => import('./pages/TermsPage.vue'),
+    meta: {
+      title: 'Terms of Service | North Lume Distribution',
+      description: 'Terms of Service for the North Lume Distribution website.',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('./pages/NotFoundPage.vue'),

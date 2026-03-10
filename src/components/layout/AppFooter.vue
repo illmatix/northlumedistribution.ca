@@ -31,5 +31,7 @@ const currentYear = new Date().getFullYear();
 const footerLinks = [
   { to: '/products', label: 'Products' },
   { to: '/contact', label: 'Contact' },
+  { to: '/privacy', label: 'Privacy Policy' },
+  { to: '/terms', label: 'Terms of Service' },
 ];
 </script>
