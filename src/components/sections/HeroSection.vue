@@ -23,6 +23,11 @@
       ></div>
     </div>
 
+    <!-- Layer 2.5: World map -->
+    <div class="pointer-events-none absolute inset-0 flex items-center justify-center opacity-[0.07]" aria-hidden="true">
+      <img src="/images/world.svg" alt="" class="h-full w-full object-contain" />
+    </div>
+
     <!-- Layer 3: Gradient overlay for depth -->
     <div
       class="pointer-events-none absolute inset-0 bg-gradient-to-b from-brand-950/0 via-brand-950/30 to-brand-950/60"
