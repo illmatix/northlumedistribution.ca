@@ -36,6 +36,14 @@ const routes = [
         'Get in touch to learn how North Lume Distribution can support your product distribution needs across Canada, USA, and Brazil.',
     },
   },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('./pages/NotFoundPage.vue'),
+    meta: {
+      title: '404 — Page Not Found | North Lume Distribution',
+    },
+  },
 ];
 
 const router = createRouter({

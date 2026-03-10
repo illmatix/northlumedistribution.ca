@@ -1,5 +1,8 @@
 <template>
-  <section class="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-900 to-accent-950 py-24 sm:py-32">
+  <section
+    ref="sectionRef"
+    class="relative overflow-hidden bg-gradient-to-br from-brand-950 via-brand-900 to-accent-950 py-24 sm:py-32"
+  >
     <!-- Layer 1: Dot pattern -->
     <div
       class="pointer-events-none absolute inset-0 opacity-[0.15]"
@@ -44,5 +47,11 @@
 </template>
 
 <script setup>
+import { ref } from 'vue';
+import { useScrollReveal } from '@/composables/useScrollReveal';
+
+const sectionRef = ref(null);
+useScrollReveal(sectionRef, { threshold: 0.1 });
+
 const dotPattern = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='12' cy='12' r='1.5' fill='%2314b8a6'/%3E%3C/svg%3E")`;
 </script>
