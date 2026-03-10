@@ -10,7 +10,7 @@
       <button
         type="button"
         class="absolute right-4 top-4 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
-        aria-label="Close"
+        :aria-label="t('lightbox.close')"
         @click="$emit('close')"
       >
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -23,7 +23,7 @@
         v-if="total > 1"
         type="button"
         class="absolute left-4 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
-        aria-label="Previous image"
+        :aria-label="t('lightbox.previous')"
         @click="$emit('prev')"
       >
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -43,7 +43,7 @@
         v-if="total > 1"
         type="button"
         class="absolute right-4 rounded-full bg-white/10 p-2 text-white transition-colors hover:bg-white/20"
-        aria-label="Next image"
+        :aria-label="t('lightbox.next')"
         @click="$emit('next')"
       >
         <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -61,6 +61,9 @@
 
 <script setup>
 import { onMounted, onUnmounted, watch } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
 
 const props = defineProps({
   open: { type: Boolean, required: true },

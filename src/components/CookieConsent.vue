@@ -17,10 +17,9 @@
         class="mx-auto flex max-w-3xl flex-col items-center gap-4 rounded-xl border border-gray-200 bg-white p-5 shadow-lg sm:flex-row sm:gap-6"
       >
         <p class="text-sm leading-6 text-gray-600">
-          We use cookies and Google Analytics to understand how visitors use our site. No personal
-          data is sold or shared.
-          <router-link to="/privacy" class="font-medium text-brand-600 hover:text-brand-500">
-            Privacy Policy
+          {{ t('cookie_consent.message') }}
+          <router-link :to="localePath('/privacy')" class="font-medium text-brand-600 hover:text-brand-500">
+            {{ t('cookie_consent.privacy_link') }}
           </router-link>
         </p>
         <div class="flex shrink-0 gap-3">
@@ -29,14 +28,14 @@
             class="rounded-md px-4 py-2 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-100"
             @click="decline"
           >
-            Decline
+            {{ t('cookie_consent.decline') }}
           </button>
           <button
             type="button"
             class="rounded-md bg-brand-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-500"
             @click="accept"
           >
-            Accept
+            {{ t('cookie_consent.accept') }}
           </button>
         </div>
       </div>
@@ -45,7 +44,11 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
 import { useConsent } from '@/composables/useConsent';
+import { useLocalePath } from '@/composables/useLocalePath';
 
+const { t } = useI18n();
+const localePath = useLocalePath();
 const { consent, accept, decline } = useConsent();
 </script>

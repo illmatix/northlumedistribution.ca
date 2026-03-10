@@ -1,9 +1,8 @@
 <template>
   <div class="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Our Products</h1>
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ t('products_page.title') }}</h1>
     <p class="mt-6 text-lg leading-8 text-gray-600">
-      North Lume Distribution carries a wide range of products across multiple categories. Browse
-      our catalog to see what we can bring to your shelves.
+      {{ t('products_page.subtitle') }}
     </p>
 
     <!-- Search & Filters -->
@@ -16,7 +15,7 @@
         <input
           v-model="search"
           type="text"
-          placeholder="Search products, brands, categories..."
+          :placeholder="t('products_page.search_placeholder')"
           class="w-full rounded-lg border border-gray-300 bg-white py-2.5 pl-10 pr-10 text-sm text-gray-900 placeholder:text-gray-400 focus:border-brand-500 focus:outline-none focus:ring-2 focus:ring-brand-500/20"
         />
         <button
@@ -39,7 +38,7 @@
           :class="!activeCategory ? 'bg-brand-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
           @click="activeCategory = null; activeBrand = null"
         >
-          All Categories
+          {{ t('products_page.all_categories') }}
         </button>
         <button
           v-for="cat in brandsData.categories"
@@ -49,7 +48,7 @@
           :class="activeCategory === cat.slug ? 'bg-brand-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'"
           @click="selectCategory(cat.slug)"
         >
-          {{ cat.name }}
+          {{ t(`categories.${cat.slug}`) }}
         </button>
       </div>
 
@@ -61,7 +60,7 @@
           :class="!activeBrand ? 'border-accent-500 bg-accent-50 text-accent-700' : 'bg-white text-gray-600 hover:bg-gray-50'"
           @click="activeBrand = null"
         >
-          All Brands
+          {{ t('products_page.all_brands') }}
         </button>
         <button
           v-for="brand in visibleBrandPills"
@@ -77,13 +76,13 @@
 
       <!-- Active filter summary -->
       <div v-if="activeCategory || activeBrand || search" class="flex items-center gap-2 text-sm text-gray-500">
-        <span>{{ filteredBrandCount }} {{ filteredBrandCount === 1 ? 'brand' : 'brands' }} found</span>
+        <span>{{ filteredBrandCount === 1 ? t('products_page.brand_found', { count: filteredBrandCount }) : t('products_page.brands_found', { count: filteredBrandCount }) }}</span>
         <button
           type="button"
           class="ml-1 text-brand-600 hover:text-brand-700 hover:underline"
           @click="clearFilters"
         >
-          Clear all
+          {{ t('products_page.clear_all') }}
         </button>
       </div>
     </div>
@@ -107,7 +106,7 @@
             >
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
             </svg>
-            <h2 class="text-2xl font-bold text-gray-900">{{ category.name }}</h2>
+            <h2 class="text-2xl font-bold text-gray-900">{{ t(`categories.${category.slug}`) }}</h2>
             <span class="text-sm text-gray-400">({{ category.brands.length }})</span>
           </button>
 
@@ -119,7 +118,7 @@
               class="scroll-mt-24"
             >
               <h3 class="text-xl font-semibold text-gray-900">{{ brand.name }}</h3>
-              <p class="mt-2 text-sm leading-6 text-gray-600">{{ brand.description }}</p>
+              <p class="mt-2 text-sm leading-6 text-gray-600">{{ t(`brands.${brand.slug}.description`) }}</p>
               <div class="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <CatalogImage
                   v-for="(page, pageIdx) in brand.pages"
@@ -139,14 +138,14 @@
         <svg class="mx-auto h-12 w-12 text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
         </svg>
-        <p class="mt-4 text-lg font-medium text-gray-900">No products found</p>
-        <p class="mt-1 text-sm text-gray-500">Try adjusting your search or filters.</p>
+        <p class="mt-4 text-lg font-medium text-gray-900">{{ t('products_page.no_results') }}</p>
+        <p class="mt-1 text-sm text-gray-500">{{ t('products_page.no_results_hint') }}</p>
         <button
           type="button"
           class="mt-4 text-sm font-medium text-brand-600 hover:text-brand-700 hover:underline"
           @click="clearFilters"
         >
-          Clear all filters
+          {{ t('products_page.clear_filters') }}
         </button>
       </div>
     </div>
@@ -167,6 +166,7 @@
 <script setup>
 import { reactive, ref, computed, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
+import { useI18n } from 'vue-i18n'
 import brandsData from '@/data/brands.json'
 import { trackEvent } from '@/composables/useAnalytics'
 import CatalogImage from '@/components/products/CatalogImage.vue'
@@ -174,50 +174,54 @@ import ImageLightbox from '@/components/products/ImageLightbox.vue'
 import { useJsonLd } from '@/composables/useJsonLd'
 
 const route = useRoute()
+const { t, locale } = useI18n()
 
 // ── JSON-LD: BreadcrumbList ─────────────────────────────────────────────
-useJsonLd({
+const breadcrumbLd = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     {
       '@type': 'ListItem',
       position: 1,
-      name: 'Home',
-      item: 'https://northlumedistribution.ca/',
+      name: t('nav.home'),
+      item: `https://northlumedistribution.ca/${locale.value}/`,
     },
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Products',
-      item: 'https://northlumedistribution.ca/products',
+      name: t('nav.products'),
+      item: `https://northlumedistribution.ca/${locale.value}/products`,
     },
   ],
-})
+}))
+useJsonLd(breadcrumbLd)
 
 // ── JSON-LD: ItemList with all brands ───────────────────────────────────
-const allBrands = brandsData.categories.flatMap((cat) =>
-  cat.brands.map((brand) => ({
-    '@type': 'Product',
-    name: brand.name,
-    description: brand.description,
-    image: `https://northlumedistribution.ca${brand.pages[0].src}`,
-    url: `https://northlumedistribution.ca/products#${brand.slug}`,
-    category: cat.name,
-  })),
-)
-
-useJsonLd({
-  '@context': 'https://schema.org',
-  '@type': 'ItemList',
-  name: 'North Lume Distribution Products',
-  numberOfItems: allBrands.length,
-  itemListElement: allBrands.map((brand, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    item: brand,
-  })),
+const itemListLd = computed(() => {
+  const allBrands = brandsData.categories.flatMap((cat) =>
+    cat.brands.map((brand) => ({
+      '@type': 'Product',
+      name: brand.name,
+      description: t(`brands.${brand.slug}.description`),
+      image: `https://northlumedistribution.ca${brand.pages[0].src}`,
+      url: `https://northlumedistribution.ca/${locale.value}/products#${brand.slug}`,
+      category: t(`categories.${cat.slug}`),
+    })),
+  )
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'North Lume Distribution Products',
+    numberOfItems: allBrands.length,
+    itemListElement: allBrands.map((brand, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: brand,
+    })),
+  }
 })
+useJsonLd(itemListLd)
 
 // ── Filters ─────────────────────────────────────────────────────────────
 const search = ref('')
@@ -230,8 +234,7 @@ function selectCategory(slug) {
   } else {
     activeCategory.value = slug
     activeBrand.value = null
-    const cat = brandsData.categories.find((c) => c.slug === slug)
-    if (cat) trackEvent('category_filter', { category: cat.name })
+    trackEvent('category_filter', { category: slug })
   }
 }
 
@@ -260,10 +263,12 @@ const filteredCategories = computed(() => {
       brands: cat.brands.filter((brand) => {
         if (activeBrand.value && brand.slug !== activeBrand.value) return false
         if (!q) return true
+        const translatedDesc = t(`brands.${brand.slug}.description`).toLowerCase()
+        const translatedCat = t(`categories.${cat.slug}`).toLowerCase()
         return (
           brand.name.toLowerCase().includes(q) ||
-          brand.description.toLowerCase().includes(q) ||
-          cat.name.toLowerCase().includes(q) ||
+          translatedDesc.includes(q) ||
+          translatedCat.includes(q) ||
           brand.slug.toLowerCase().includes(q)
         )
       }),

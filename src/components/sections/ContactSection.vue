@@ -3,17 +3,17 @@
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
         <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Ready to Get Started?
+          {{ t('contact_cta.title') }}
         </h2>
         <p class="mt-4 text-lg leading-8 text-gray-600">
-          Contact us today to discuss your distribution needs.
+          {{ t('contact_cta.subtitle') }}
         </p>
         <div class="mt-10">
           <router-link
-            to="/contact"
+            :to="localePath('/contact')"
             class="rounded-md bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
           >
-            Contact Us
+            {{ t('contact_cta.button') }}
           </router-link>
         </div>
       </div>
@@ -23,7 +23,12 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { useScrollReveal } from '@/composables/useScrollReveal';
+import { useLocalePath } from '@/composables/useLocalePath';
+
+const { t } = useI18n();
+const localePath = useLocalePath();
 
 const sectionRef = ref(null);
 useScrollReveal(sectionRef);

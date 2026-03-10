@@ -1,0 +1,189 @@
+{
+  "common": {
+    "skip_to_content": "Pular para o conte\u00fado principal"
+  },
+  "nav": {
+    "home": "In\u00edcio",
+    "products": "Produtos",
+    "contact": "Contato"
+  },
+  "footer": {
+    "products": "Produtos",
+    "contact": "Contato",
+    "privacy": "Pol\u00edtica de Privacidade",
+    "terms": "Termos de Servi\u00e7o",
+    "copyright": "North Lume Distribution. Todos os direitos reservados."
+  },
+  "hero": {
+    "title": "Distribui\u00e7\u00e3o confi\u00e1vel de produtos no Canad\u00e1, EUA e Brasil",
+    "subtitle": "Com mais de 8 anos de experi\u00eancia, a North Lume Distribution fornece produtos de alta qualidade para postos de gasolina, lojas de conveni\u00eancia, supermercados e com\u00e9rcios varejistas. Cuidamos da log\u00edstica para que voc\u00ea possa focar no crescimento do seu neg\u00f3cio.",
+    "cta_primary": "Entre em contato",
+    "cta_secondary": "Ver produtos"
+  },
+  "about": {
+    "title": "Quem somos",
+    "p1": "Trabalhamos diretamente com marcas e fabricantes para trazer uma sele\u00e7\u00e3o de produtos ao mercado varejista. De eletr\u00f4nicos e snacks a brinquedos e acess\u00f3rios, nosso cat\u00e1logo abrange sete categorias \u2014 em estoque e pronto para envio.",
+    "p2": "Seja voc\u00ea uma marca em crescimento buscando maior alcance ou um varejista procurando um parceiro de fornecimento confi\u00e1vel, adaptamos nossa abordagem ao seu neg\u00f3cio. Pre\u00e7os competitivos, estoque consistente e suporte dedicado s\u00e3o padr\u00e3o."
+  },
+  "stats": {
+    "years": "Anos de experi\u00eancia",
+    "products": "Produtos distribu\u00eddos",
+    "countries": "Pa\u00edses atendidos",
+    "categories": "Categorias de produtos"
+  },
+  "featured": {
+    "title": "Produtos em destaque",
+    "subtitle": "Conhe\u00e7a algumas das marcas que distribu\u00edmos.",
+    "view_all": "Ver todos os produtos"
+  },
+  "contact_cta": {
+    "title": "Pronto para abastecer?",
+    "subtitle": "Diga-nos o que voc\u00ea procura \u2014 n\u00f3s cuidamos do resto.",
+    "button": "Entre em contato"
+  },
+  "products_page": {
+    "title": "Nossos produtos",
+    "subtitle": "A North Lume Distribution oferece uma ampla variedade de produtos em diversas categorias. Navegue pelo nosso cat\u00e1logo para ver o que podemos colocar nas suas prateleiras.",
+    "search_placeholder": "Buscar produtos, marcas, categorias...",
+    "all_categories": "Todas as categorias",
+    "all_brands": "Todas as marcas",
+    "brand_found": "{count} marca encontrada",
+    "brands_found": "{count} marcas encontradas",
+    "clear_all": "Limpar tudo",
+    "no_results": "Nenhum produto encontrado",
+    "no_results_hint": "Tente ajustar sua busca ou filtros.",
+    "clear_filters": "Limpar todos os filtros"
+  },
+  "contact_page": {
+    "title": "Fale conosco",
+    "subtitle": "Procurando um parceiro de distribui\u00e7\u00e3o no Canad\u00e1, EUA ou Brasil? Conte-nos sobre seu neg\u00f3cio e entraremos em contato.",
+    "email_label": "E-mail",
+    "form_name": "Nome",
+    "form_email": "E-mail",
+    "form_phone": "Telefone",
+    "form_phone_optional": "(opcional)",
+    "form_message": "Mensagem",
+    "form_submit": "Enviar mensagem",
+    "form_submitting": "Enviando...",
+    "success_title": "Mensagem enviada!",
+    "success_body": "Obrigado por entrar em contato. Responderemos em breve.",
+    "success_reset": "Enviar outra mensagem",
+    "error_generic": "Algo deu errado. Por favor, tente novamente.",
+    "error_network": "Erro de rede. Verifique sua conex\u00e3o e tente novamente."
+  },
+  "not_found": {
+    "title": "P\u00e1gina n\u00e3o encontrada",
+    "body": "Desculpe, n\u00e3o conseguimos encontrar a p\u00e1gina que voc\u00ea procura.",
+    "go_home": "Voltar ao in\u00edcio",
+    "view_products": "Ver produtos"
+  },
+  "cookie_consent": {
+    "message": "Usamos cookies e Google Analytics para entender como os visitantes usam nosso site. Nenhum dado pessoal \u00e9 vendido ou compartilhado.",
+    "privacy_link": "Pol\u00edtica de Privacidade",
+    "decline": "Recusar",
+    "accept": "Aceitar"
+  },
+  "lightbox": {
+    "close": "Fechar",
+    "previous": "Imagem anterior",
+    "next": "Pr\u00f3xima imagem"
+  },
+  "legal": {
+    "privacy_title": "Pol\u00edtica de Privacidade",
+    "terms_title": "Termos de Servi\u00e7o",
+    "last_updated": "\u00daltima atualiza\u00e7\u00e3o: 9 de mar\u00e7o de 2026"
+  },
+  "categories": {
+    "electronics-tech": "Eletr\u00f4nicos e Tecnologia",
+    "candy-confections": "Doces e Confeitos",
+    "food-snacks": "Alimentos e Snacks",
+    "toys-novelties": "Brinquedos e Novidades",
+    "accessories": "Acess\u00f3rios",
+    "pet": "Pet",
+    "outdoor": "Ar Livre"
+  },
+  "brands": {
+    "volt": {
+      "description": "Cabos, fones de ouvido, cabos auxiliares e carregadores premium Volt Elite V3. Cabos de carregamento r\u00e1pido Volt Evolution 4-em-1 Tuff em 4, 6 e 10 p\u00e9s."
+    },
+    "tech-361": {
+      "description": "Kit de display de balc\u00e3o com 36 pe\u00e7as incluindo cabos Type C, iPhone tran\u00e7ados, Micro USB tran\u00e7ados, carregadores de parede e de carro."
+    },
+    "sour-rockstar": {
+      "description": "Doce l\u00edquido azedo em rolo, 75 ml por unidade. 12 pe\u00e7as por display, 8 displays por caixa."
+    },
+    "gorilla-squeeze": {
+      "description": "Doce gel azedo em Blue Razz e Morango. Embalagem duplo sabor de 56 ml."
+    },
+    "tnt-sour-stix": {
+      "description": "Palitos de doce azedo explosivos em diversos sabores."
+    },
+    "squeeze-team-heroes": {
+      "description": "Doces comprim\u00edveis tem\u00e1ticos de super-her\u00f3is para crian\u00e7as."
+    },
+    "cheeky-monkey": {
+      "description": "Cones de doces de goma e azedos em sabores sortidos. Kit de display de ch\u00e3o com 96 pe\u00e7as."
+    },
+    "zaks-jerky": {
+      "description": "Jerky de carne Black Angus premium. Formato tradicional de 120 g em quatro sabores marcantes mais variedades Big Bag de 120 g."
+    },
+    "the-butcher": {
+      "description": "Jerky de carne de 90 g fabricado localmente em Original, Teriyaki, Picante-Doce e Defumado Hickory. Kit de 80 pe\u00e7as."
+    },
+    "kokum": {
+      "description": "Jerky de carne Kokum, de propriedade ind\u00edgena, em formatos de 75 g e 175 g."
+    },
+    "die-cast-cars": {
+      "description": "Carrinhos fundidos sob press\u00e3o com logos oficiais, pneus de borracha, mecanismo de recuo e portas que abrem. Mais de 150 modelos."
+    },
+    "3d-minis-creatures": {
+      "description": "Mini figuras 3D colecion\u00e1veis e brinquedos de criaturas articuladas. Kit de display de ch\u00e3o com 110 pe\u00e7as."
+    },
+    "warp-worm": {
+      "description": "Brinquedos novidade e itens fidget Warp Worm."
+    },
+    "charm-buddies": {
+      "description": "Pingentes de bolsa colecion\u00e1veis em display girat\u00f3rio de balc\u00e3o com 96 pe\u00e7as."
+    },
+    "cool-tats": {
+      "description": "Tatuagens tempor\u00e1rias em tamanhos completo, m\u00e9dio e pequeno. Display de ch\u00e3o com 120 pe\u00e7as e mais de 100 designs."
+    },
+    "sticker-kraze": {
+      "description": "Adesivos de bambu de madeira real. Visual vintage \u00fanico, 5 a 8 cm. Display de balc\u00e3o com 120 pe\u00e7as."
+    },
+    "bag-swag": {
+      "description": "Acess\u00f3rios de bolsa modernos e decorativos."
+    },
+    "keysteez": {
+      "description": "Chaveiros e acess\u00f3rios estilosos."
+    },
+    "retro-rattlers": {
+      "description": "\u00d3culos de sol retr\u00f4 com lentes revo que mudam de cor e hastes ajust\u00e1veis. Display de ch\u00e3o com 48 pe\u00e7as."
+    },
+    "fancy-fannys": {
+      "description": "Pochetes e bolsas de cintura estilosas."
+    },
+    "card-guard": {
+      "description": "Porta-cart\u00f5es protetores e carteiras com bloqueio RFID."
+    },
+    "bones": {
+      "description": "Petiscos premium naturais para animais: palitos de bully, traqueia bovina, palitos de carne, carne tran\u00e7ada, orelhas de vaca e orelhas de porco. Kit de display com 210 pe\u00e7as."
+    },
+    "campers": {
+      "description": "Espetos para fogueira de 86 cm em a\u00e7o torcido calibre 10 com cabos de madeira. Kit de 55 pe\u00e7as."
+    }
+  },
+  "seo": {
+    "home_title": "North Lume Distribution | Distribui\u00e7\u00e3o de Produtos no Canad\u00e1, EUA e Brasil",
+    "home_description": "A North Lume Distribution fornece mais de 23 produtos em sete categorias para varejistas no Canad\u00e1, EUA e Brasil.",
+    "products_title": "Nossos Produtos | North Lume Distribution",
+    "products_description": "Navegue pelo nosso cat\u00e1logo completo \u2014 eletr\u00f4nicos, doces, snacks, brinquedos, acess\u00f3rios, petiscos para animais e equipamentos de ar livre de mais de 23 marcas.",
+    "contact_title": "Fale Conosco | North Lume Distribution",
+    "contact_description": "Entre em contato para iniciar uma parceria de atacado ou perguntar sobre nossas linhas de produtos.",
+    "privacy_title": "Pol\u00edtica de Privacidade | North Lume Distribution",
+    "privacy_description": "Saiba como a North Lume Distribution coleta, usa e protege suas informa\u00e7\u00f5es.",
+    "terms_title": "Termos de Servi\u00e7o | North Lume Distribution",
+    "terms_description": "Termos de Servi\u00e7o do site da North Lume Distribution.",
+    "not_found_title": "404 \u2014 P\u00e1gina N\u00e3o Encontrada | North Lume Distribution"
+  }
+}

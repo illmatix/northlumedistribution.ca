@@ -11,6 +11,8 @@ export default [
       'coverage/**',
       '**/*.min.js',
       '**/*.min.css',
+      '.pnp.*',
+      '.yarn/**',
     ],
   },
 

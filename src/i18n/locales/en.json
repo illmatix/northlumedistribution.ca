@@ -1,0 +1,190 @@
+{
+  "common": {
+    "skip_to_content": "Skip to main content"
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "contact": "Contact"
+  },
+  "footer": {
+    "products": "Products",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "North Lume Distribution. All rights reserved."
+  },
+  "hero": {
+    "title": "Reliable Product Distribution Across Canada, USA & Brazil",
+    "subtitle": "With over 8 years of experience, North Lume Distribution supplies high-quality products to gas stations, convenience stores, supermarkets, and retail businesses. We handle the logistics so you can focus on growing your business.",
+    "cta_primary": "Get in Touch",
+    "cta_secondary": "View Products"
+  },
+  "about": {
+    "title": "Who We Are",
+    "p1": "We work directly with brands and manufacturers to bring a curated selection of products to the retail market. From electronics and snacks to toys and accessories, our catalog spans seven categories — stocked and ready to ship.",
+    "p2": "Whether you're a growing brand looking for wider reach or a retailer seeking a dependable supply partner, we tailor our approach to fit your business. Competitive pricing, consistent inventory, and hands-on support come standard."
+  },
+  "stats": {
+    "years": "Years of Experience",
+    "products": "Products Distributed",
+    "countries": "Countries Served",
+    "categories": "Product Categories"
+  },
+  "featured": {
+    "title": "Featured Products",
+    "subtitle": "A look at some of the brands we carry.",
+    "view_all": "View all products"
+  },
+  "contact_cta": {
+    "title": "Ready to Stock Up?",
+    "subtitle": "Tell us what you're looking for — we'll handle the rest.",
+    "button": "Get in Touch"
+  },
+  "products_page": {
+    "title": "Our Products",
+    "subtitle": "North Lume Distribution carries a wide range of products across multiple categories. Browse our catalog to see what we can bring to your shelves.",
+    "search_placeholder": "Search products, brands, categories...",
+    "all_categories": "All Categories",
+    "all_brands": "All Brands",
+    "brand_found": "{count} brand found",
+    "brands_found": "{count} brands found",
+    "clear_all": "Clear all",
+    "no_results": "No products found",
+    "no_results_hint": "Try adjusting your search or filters.",
+    "clear_filters": "Clear all filters"
+  },
+  "contact_page": {
+    "title": "Contact Us",
+    "subtitle": "Looking for a distribution partner in Canada, USA, or Brazil? Tell us about your business and we'll get back to you.",
+    "email_label": "Email",
+    "form_name": "Name",
+    "form_email": "Email",
+    "form_phone": "Phone",
+    "form_phone_optional": "(optional)",
+    "form_message": "Message",
+    "form_submit": "Send Message",
+    "form_submitting": "Sending...",
+    "success_title": "Message Sent!",
+    "success_body": "Thank you for reaching out. We'll get back to you shortly.",
+    "success_reset": "Send another message",
+    "error_generic": "Something went wrong. Please try again.",
+    "error_network": "Network error. Please check your connection and try again.",
+    "email_subject": "New contact from {name} — North Lume Distribution"
+  },
+  "not_found": {
+    "title": "Page not found",
+    "body": "Sorry, we couldn't find the page you're looking for.",
+    "go_home": "Go home",
+    "view_products": "View products"
+  },
+  "cookie_consent": {
+    "message": "We use cookies and Google Analytics to understand how visitors use our site. No personal data is sold or shared.",
+    "privacy_link": "Privacy Policy",
+    "decline": "Decline",
+    "accept": "Accept"
+  },
+  "lightbox": {
+    "close": "Close",
+    "previous": "Previous image",
+    "next": "Next image"
+  },
+  "legal": {
+    "privacy_title": "Privacy Policy",
+    "terms_title": "Terms of Service",
+    "last_updated": "Last updated: March 9, 2026"
+  },
+  "categories": {
+    "electronics-tech": "Electronics & Tech",
+    "candy-confections": "Candy & Confections",
+    "food-snacks": "Food & Snacks",
+    "toys-novelties": "Toys & Novelties",
+    "accessories": "Accessories",
+    "pet": "Pet",
+    "outdoor": "Outdoor"
+  },
+  "brands": {
+    "volt": {
+      "description": "Volt Elite V3 premium cables, earbuds, aux cords, and chargers. Volt Evolution 4-in-1 Tuff fast charge cables in 4ft, 6ft, and 10ft."
+    },
+    "tech-361": {
+      "description": "36pc counter display kit with Type C, braided iPhone, braided Micro USB cables, plus wall and car chargers."
+    },
+    "sour-rockstar": {
+      "description": "Sour liquid roller candy, 75ml per piece. 12 pcs per display, 8 displays per case."
+    },
+    "gorilla-squeeze": {
+      "description": "Sour gel slime candy in Blue Razz and Strawberry. 56ml dual-flavour package."
+    },
+    "tnt-sour-stix": {
+      "description": "Explosive sour candy sticks in a variety of flavors."
+    },
+    "squeeze-team-heroes": {
+      "description": "Hero-themed squeezable candy for kids."
+    },
+    "cheeky-monkey": {
+      "description": "Gummies and Sours candy cones in mixed flavors. 96pc floor shipper kit."
+    },
+    "zaks-jerky": {
+      "description": "Premium Black Angus beef jerky. Traditional 120g in four bold flavors plus 120g Big Bag varieties."
+    },
+    "the-butcher": {
+      "description": "Locally made 90g beef jerky in Original, Teriyaki, Hot 'N Sweet, and Hickory Smoke. 80pc shipper kit."
+    },
+    "kokum": {
+      "description": "Indigenous-owned Kokum beef jerky in 75g and 175g sizes."
+    },
+    "die-cast-cars": {
+      "description": "Officially licensed die-cast cars with real logos, rubber tires, pull-back action, and opening doors. Over 150 models."
+    },
+    "3d-minis-creatures": {
+      "description": "Collectible 3D-printed mini figures and articulated creature toys. 110pc floor display kit."
+    },
+    "warp-worm": {
+      "description": "Warp Worm novelty toys and fidget items."
+    },
+    "charm-buddies": {
+      "description": "Collectible bag charms on a 96pc countertop spinner rack with fun designs."
+    },
+    "cool-tats": {
+      "description": "Temporary tattoos in full, half, and small sizes. 120pc floor display with over 100 designs."
+    },
+    "sticker-kraze": {
+      "description": "Bamboo stickers made with real wood. Unique vintage look, 2 to 3 inches. 120pc counter display."
+    },
+    "bag-swag": {
+      "description": "Trendy bag accessories and decorative swag."
+    },
+    "keysteez": {
+      "description": "Stylish keychains and keyring accessories."
+    },
+    "retro-rattlers": {
+      "description": "Retro-styled sunglasses with color-shifting revo lenses and adjustable ear loops. 48pc floor shipper."
+    },
+    "fancy-fannys": {
+      "description": "Stylish fanny packs and waist bags."
+    },
+    "card-guard": {
+      "description": "Protective card holders and RFID-blocking wallets."
+    },
+    "bones": {
+      "description": "All-natural premium pet treats: bully sticks, beef trachea, beef sticks, braided beef, cow ears, and pig ears. 210pc display kit."
+    },
+    "campers": {
+      "description": "34-inch campfire roasting sticks with 10-gauge twisted steel and wooden handles. 55pc shipper kit."
+    }
+  },
+  "seo": {
+    "home_title": "North Lume Distribution | Product Distribution Across Canada, USA & Brazil",
+    "home_description": "North Lume Distribution supplies 23+ products across seven categories to retailers in Canada, USA, and Brazil.",
+    "products_title": "Our Products | North Lume Distribution",
+    "products_description": "Browse our full catalog — electronics, candy, snacks, toys, accessories, pet treats, and outdoor gear from 23+ brands.",
+    "contact_title": "Contact Us | North Lume Distribution",
+    "contact_description": "Reach out to start a wholesale partnership or ask about our product lines. We'd love to hear from you.",
+    "privacy_title": "Privacy Policy | North Lume Distribution",
+    "privacy_description": "Learn how North Lume Distribution collects, uses, and protects your information.",
+    "terms_title": "Terms of Service | North Lume Distribution",
+    "terms_description": "Terms of Service for the North Lume Distribution website.",
+    "not_found_title": "404 — Page Not Found | North Lume Distribution"
+  }
+}

@@ -34,42 +34,40 @@ describe('route configuration', () => {
     await import('@/main.js');
   });
 
-  it('defines all expected routes', () => {
-    const paths = routes.map((r) => r.path);
-    expect(paths).toContain('/');
-    expect(paths).toContain('/products');
-    expect(paths).toContain('/contact');
-    expect(paths).toContain('/privacy');
-    expect(paths).toContain('/terms');
+  it('defines a locale-prefixed parent route', () => {
+    const localeRoute = routes.find((r) => r.path === '/:locale');
+    expect(localeRoute).toBeDefined();
+    expect(localeRoute.children).toBeDefined();
+    expect(localeRoute.children.length).toBeGreaterThan(0);
   });
 
-  it('has a catch-all 404 route', () => {
-    const notFound = routes.find((r) => r.name === 'NotFound');
+  it('defines all expected child routes under /:locale', () => {
+    const localeRoute = routes.find((r) => r.path === '/:locale');
+    const childPaths = localeRoute.children.map((r) => r.path);
+    expect(childPaths).toContain('');
+    expect(childPaths).toContain('products');
+    expect(childPaths).toContain('contact');
+    expect(childPaths).toContain('privacy');
+    expect(childPaths).toContain('terms');
+  });
+
+  it('has a catch-all 404 route under /:locale', () => {
+    const localeRoute = routes.find((r) => r.path === '/:locale');
+    const notFound = localeRoute.children.find((r) => r.name === 'NotFound');
     expect(notFound).toBeDefined();
-    expect(notFound.path).toBe('/:pathMatch(.*)*');
+    expect(notFound.path).toBe(':pathMatch(.*)*');
   });
 
-  it('every route has a meta.title', () => {
-    for (const route of routes) {
-      expect(route.meta).toBeDefined();
-      expect(typeof route.meta.title).toBe('string');
-      expect(route.meta.title.length).toBeGreaterThan(0);
-    }
+  it('redirects bare / to /en/', () => {
+    const rootRedirect = routes.find((r) => r.path === '/');
+    expect(rootRedirect).toBeDefined();
+    expect(rootRedirect.redirect).toBe('/en/');
   });
 
-  it('all content routes have meta.description', () => {
-    const contentRoutes = routes.filter(
-      (r) => r.name !== 'NotFound' && r.path !== '/:pathMatch(.*)*',
-    );
-    for (const route of contentRoutes) {
-      expect(route.meta.description).toBeDefined();
-      expect(typeof route.meta.description).toBe('string');
-    }
-  });
-
-  it('all route components are lazy-loaded', () => {
-    for (const route of routes) {
-      expect(typeof route.component).toBe('function');
+  it('all page route components are lazy-loaded', () => {
+    const localeRoute = routes.find((r) => r.path === '/:locale');
+    for (const child of localeRoute.children) {
+      expect(typeof child.component).toBe('function');
     }
   });
 });

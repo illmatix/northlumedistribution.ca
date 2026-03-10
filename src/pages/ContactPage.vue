@@ -3,15 +3,14 @@
     <div class="grid grid-cols-1 gap-x-16 gap-y-12 lg:grid-cols-5">
       <!-- Left column: Contact info -->
       <div class="lg:col-span-2">
-        <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Contact Us</h1>
+        <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ t('contact_page.title') }}</h1>
         <p class="mt-6 text-lg leading-8 text-gray-600">
-          Get in touch to learn how North Lume Distribution can support your product distribution
-          needs across Canada, USA, and Brazil.
+          {{ t('contact_page.subtitle') }}
         </p>
         <dl class="mt-10 space-y-4 text-base leading-7 text-gray-600">
           <div class="flex gap-x-4">
             <dt class="flex-none">
-              <span class="sr-only">Email</span>
+              <span class="sr-only">{{ t('contact_page.email_label') }}</span>
               <svg
                 class="h-7 w-6 text-gray-400"
                 fill="none"
@@ -62,16 +61,16 @@
               d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <h2 class="mt-4 text-lg font-semibold text-accent-700">Message Sent!</h2>
+          <h2 class="mt-4 text-lg font-semibold text-accent-700">{{ t('contact_page.success_title') }}</h2>
           <p class="mt-2 text-accent-700">
-            Thank you for reaching out. We'll get back to you shortly.
+            {{ t('contact_page.success_body') }}
           </p>
           <button
             type="button"
             class="mt-6 rounded-md bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600"
             @click="resetForm"
           >
-            Send another message
+            {{ t('contact_page.success_reset') }}
           </button>
         </div>
 
@@ -88,7 +87,7 @@
 
           <div>
             <label for="name" class="block text-sm font-semibold leading-6 text-gray-900">
-              Name
+              {{ t('contact_page.form_name') }}
             </label>
             <div class="mt-2.5">
               <input
@@ -107,7 +106,7 @@
 
           <div>
             <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">
-              Email
+              {{ t('contact_page.form_email') }}
             </label>
             <div class="mt-2.5">
               <input
@@ -125,7 +124,7 @@
 
           <div>
             <label for="phone" class="block text-sm font-semibold leading-6 text-gray-900">
-              Phone <span class="font-normal text-gray-500">(optional)</span>
+              {{ t('contact_page.form_phone') }} <span class="font-normal text-gray-500">{{ t('contact_page.form_phone_optional') }}</span>
             </label>
             <div class="mt-2.5">
               <input
@@ -142,7 +141,7 @@
 
           <div>
             <label for="message" class="block text-sm font-semibold leading-6 text-gray-900">
-              Message
+              {{ t('contact_page.form_message') }}
             </label>
             <div class="mt-2.5">
               <textarea
@@ -169,7 +168,7 @@
               :disabled="formState === 'submitting'"
               class="rounded-md bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              {{ formState === 'submitting' ? 'Sending...' : 'Send Message' }}
+              {{ formState === 'submitting' ? t('contact_page.form_submitting') : t('contact_page.form_submit') }}
             </button>
           </div>
         </form>
@@ -179,9 +178,12 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
+import { useI18n } from 'vue-i18n'
 import { useJsonLd } from '@/composables/useJsonLd'
 import { trackEvent } from '@/composables/useAnalytics'
+
+const { t, locale } = useI18n()
 
 const WEB3FORMS_KEY = 'afda8128-785c-42ec-82d7-a9726ba8d835'
 
@@ -211,7 +213,7 @@ async function submitForm() {
         email: form.email,
         phone: form.phone,
         message: form.message,
-        subject: `New contact from ${form.name} — North Lume Distribution`,
+        subject: t('contact_page.email_subject', { name: form.name }),
       }),
     })
 
@@ -225,11 +227,11 @@ async function submitForm() {
       })
     } else {
       formState.value = 'error'
-      errorMessage.value = data.message || 'Something went wrong. Please try again.'
+      errorMessage.value = data.message || t('contact_page.error_generic')
     }
   } catch {
     formState.value = 'error'
-    errorMessage.value = 'Network error. Please check your connection and try again.'
+    errorMessage.value = t('contact_page.error_network')
   }
 }
 
@@ -242,22 +244,23 @@ function resetForm() {
   form.message = ''
 }
 
-useJsonLd({
+const breadcrumbLd = computed(() => ({
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
     {
       '@type': 'ListItem',
       position: 1,
-      name: 'Home',
-      item: 'https://northlumedistribution.ca/',
+      name: t('nav.home'),
+      item: `https://northlumedistribution.ca/${locale.value}/`,
     },
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Contact',
-      item: 'https://northlumedistribution.ca/contact',
+      name: t('nav.contact'),
+      item: `https://northlumedistribution.ca/${locale.value}/contact`,
     },
   ],
-})
+}))
+useJsonLd(breadcrumbLd)
 </script>

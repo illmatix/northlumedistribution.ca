@@ -1,77 +1,23 @@
 <template>
   <div class="mx-auto max-w-3xl px-6 py-16 lg:px-8">
-    <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Terms of Service</h1>
-    <p class="mt-4 text-sm text-gray-500">Last updated: March 9, 2026</p>
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{{ t('legal.terms_title') }}</h1>
+    <p class="mt-4 text-sm text-gray-500">{{ t('legal.last_updated') }}</p>
 
-    <div class="prose prose-gray mt-10 max-w-none">
-      <p>
-        Welcome to <strong>northlumedistribution.ca</strong> ("the Site"), operated by North Lume
-        Distribution ("we", "us", or "our"). By accessing or using the Site, you agree to be bound
-        by these Terms of Service.
-      </p>
-
-      <h2>Use of the Site</h2>
-      <p>
-        This Site is provided for informational purposes about North Lume Distribution's products
-        and services. You agree to use the Site only for lawful purposes and in accordance with these
-        Terms.
-      </p>
-
-      <h2>Intellectual Property</h2>
-      <p>
-        All content on this Site — including text, graphics, logos, images, and software — is the
-        property of North Lume Distribution or its content suppliers and is protected by applicable
-        intellectual property laws. You may not reproduce, distribute, or create derivative works
-        from any content without our prior written consent.
-      </p>
-
-      <h2>Product Information</h2>
-      <p>
-        We make reasonable efforts to ensure that product information displayed on the Site is
-        accurate. However, we do not warrant that product descriptions, images, pricing, or
-        availability are error-free, complete, or current. Product availability and terms are subject
-        to change without notice.
-      </p>
-
-      <h2>Contact Form</h2>
-      <p>
-        When you submit information through our contact form, you agree to provide accurate and
-        complete information. We are not obligated to respond to all inquiries but will make
-        reasonable efforts to do so.
-      </p>
-
-      <h2>Third-Party Links</h2>
-      <p>
-        The Site may contain links to third-party websites. We are not responsible for the content,
-        privacy practices, or availability of those sites. Accessing third-party links is at your own
-        risk.
-      </p>
-
-      <h2>Limitation of Liability</h2>
-      <p>
-        To the fullest extent permitted by law, North Lume Distribution shall not be liable for any
-        indirect, incidental, special, or consequential damages arising from your use of the Site.
-        The Site is provided "as is" without warranties of any kind, either express or implied.
-      </p>
-
-      <h2>Changes to These Terms</h2>
-      <p>
-        We may update these Terms from time to time. Changes will be posted on this page with an
-        updated revision date. Continued use of the Site after changes constitutes acceptance of the
-        revised Terms.
-      </p>
-
-      <h2>Governing Law</h2>
-      <p>
-        These Terms are governed by and construed in accordance with the laws of the Province of
-        Ontario, Canada, without regard to its conflict of law provisions.
-      </p>
-
-      <h2>Contact Us</h2>
-      <p>
-        If you have questions about these Terms, contact us at
-        <a href="mailto:hello@northlumedistribution.ca">hello@northlumedistribution.ca</a>.
-      </p>
-    </div>
+    <!-- eslint-disable-next-line vue/no-v-html -- Build-time import, not user content -->
+    <div class="prose prose-gray mt-10 max-w-none" v-html="content"></div>
   </div>
 </template>
+
+<script setup>
+import { computed } from 'vue'
+import { useI18n } from 'vue-i18n'
+
+const { t, locale } = useI18n()
+
+const legalContent = import.meta.glob('@/i18n/legal/terms.*.html', { query: '?raw', eager: true })
+
+const content = computed(() => {
+  const key = Object.keys(legalContent).find((k) => k.includes(`terms.${locale.value}.html`))
+  return key ? legalContent[key].default : ''
+})
+</script>

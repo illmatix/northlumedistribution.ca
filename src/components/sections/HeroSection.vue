@@ -38,27 +38,25 @@
     <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
       <div class="mx-auto max-w-2xl text-center">
         <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-          Reliable Product Distribution Across Canada, USA &amp; Brazil
+          {{ t('hero.title') }}
         </h1>
         <p class="mt-6 text-lg leading-8 text-brand-100">
-          With over 8 years of experience, North Lume Distribution supplies high-quality products to
-          gas stations, convenience stores, supermarkets, and retail businesses. We handle the
-          logistics so you can focus on growing your business.
+          {{ t('hero.subtitle') }}
         </p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <router-link
-            to="/contact"
+            :to="localePath('/contact')"
             class="rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400"
             @click="trackCta('get_in_touch')"
           >
-            Get in Touch
+            {{ t('hero.cta_primary') }}
           </router-link>
           <router-link
-            to="/products"
+            :to="localePath('/products')"
             class="text-sm font-semibold leading-6 text-brand-200 transition-colors hover:text-white"
             @click="trackCta('view_products')"
           >
-            View Products <span aria-hidden="true">&rarr;</span>
+            {{ t('hero.cta_secondary') }} <span aria-hidden="true">&rarr;</span>
           </router-link>
         </div>
       </div>
@@ -80,8 +78,13 @@
 
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { useScrollReveal } from '@/composables/useScrollReveal';
+import { useLocalePath } from '@/composables/useLocalePath';
 import { trackEvent } from '@/composables/useAnalytics';
+
+const { t } = useI18n();
+const localePath = useLocalePath();
 
 const sectionRef = ref(null);
 useScrollReveal(sectionRef, { threshold: 0.1 });

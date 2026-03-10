@@ -8,17 +8,17 @@
         <div class="mt-4 flex gap-6 md:mt-0">
           <router-link
             v-for="link in footerLinks"
-            :key="link.to"
-            :to="link.to"
+            :key="link.key"
+            :to="localePath(link.path)"
             class="text-sm text-gray-500 transition-colors hover:text-brand-600"
           >
-            {{ link.label }}
+            {{ t(`footer.${link.key}`) }}
           </router-link>
         </div>
       </div>
       <div class="mt-8 border-t border-gray-200 pt-8">
         <p class="text-center text-sm text-gray-400">
-          &copy; {{ currentYear }} North Lume Distribution. All rights reserved.
+          &copy; {{ currentYear }} {{ t('footer.copyright') }}
         </p>
       </div>
     </div>
@@ -26,12 +26,17 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
+import { useLocalePath } from '@/composables/useLocalePath';
+
+const { t } = useI18n();
+const localePath = useLocalePath();
 const currentYear = new Date().getFullYear();
 
 const footerLinks = [
-  { to: '/products', label: 'Products' },
-  { to: '/contact', label: 'Contact' },
-  { to: '/privacy', label: 'Privacy Policy' },
-  { to: '/terms', label: 'Terms of Service' },
+  { key: 'products', path: '/products' },
+  { key: 'contact', path: '/contact' },
+  { key: 'privacy', path: '/privacy' },
+  { key: 'terms', path: '/terms' },
 ];
 </script>

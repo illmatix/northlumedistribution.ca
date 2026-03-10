@@ -15,14 +15,14 @@
     <!-- Content -->
     <div class="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
       <dl class="grid grid-cols-2 gap-8 lg:grid-cols-4">
-        <div v-for="stat in stats" :key="stat.label" class="text-center">
+        <div v-for="stat in stats" :key="stat.key" class="text-center">
           <div class="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-accent-500/20">
             <component :is="stat.icon" class="h-6 w-6 text-accent-400" />
           </div>
           <dd class="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
             {{ stat.value }}
           </dd>
-          <dt class="mt-2 text-sm leading-6 text-brand-200">{{ stat.label }}</dt>
+          <dt class="mt-2 text-sm leading-6 text-brand-200">{{ t(`stats.${stat.key}`) }}</dt>
         </div>
       </dl>
     </div>
@@ -43,7 +43,10 @@
 
 <script setup>
 import { ref, h } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { useScrollReveal } from '@/composables/useScrollReveal';
+
+const { t } = useI18n();
 
 const sectionRef = ref(null);
 useScrollReveal(sectionRef);
@@ -110,9 +113,9 @@ const SquaresIcon = {
 };
 
 const stats = [
-  { value: '8+', label: 'Years of Experience', icon: CalendarIcon },
-  { value: '23+', label: 'Products Distributed', icon: CubeIcon },
-  { value: '3', label: 'Countries Served', icon: GlobeIcon },
-  { value: '7', label: 'Product Categories', icon: SquaresIcon },
+  { value: '8+', key: 'years', icon: CalendarIcon },
+  { value: '23+', key: 'products', icon: CubeIcon },
+  { value: '3', key: 'countries', icon: GlobeIcon },
+  { value: '7', key: 'categories', icon: SquaresIcon },
 ];
 </script>

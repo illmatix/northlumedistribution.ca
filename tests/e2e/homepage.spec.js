@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Homepage', () => {
   test.beforeEach(async ({ page }) => {
-    await page.goto('/');
+    await page.goto('/en/');
   });
 
   test('renders hero section with heading', async ({ page }) => {
@@ -30,17 +30,17 @@ test.describe('Homepage', () => {
   });
 
   test('renders Contact CTA section', async ({ page }) => {
-    await expect(page.getByText('Ready to Get Started?')).toBeVisible();
+    await expect(page.getByText('Ready to Stock Up?')).toBeVisible();
   });
 
   test('hero Get in Touch navigates to contact page', async ({ page }) => {
     await page.getByRole('link', { name: 'Get in Touch' }).first().click();
-    await expect(page).toHaveURL('/contact');
+    await expect(page).toHaveURL(/\/en\/contact/);
   });
 
   test('hero View Products navigates to products page', async ({ page }) => {
     await page.getByRole('link', { name: /View Products/ }).first().click();
-    await expect(page).toHaveURL('/products');
+    await expect(page).toHaveURL(/\/en\/products/);
   });
 
   test('has correct page title', async ({ page }) => {

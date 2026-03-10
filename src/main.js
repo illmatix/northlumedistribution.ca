@@ -1,67 +1,58 @@
 import { createApp } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import App from './App.vue';
+import i18n, { SUPPORTED_LOCALES, DEFAULT_LOCALE } from './i18n';
 import './styles/main.css';
 
 const SITE_URL = 'https://northlumedistribution.ca';
 
-const routes = [
+const pageRoutes = [
   {
-    path: '/',
+    path: '',
     name: 'home',
     component: () => import('./pages/HomePage.vue'),
-    meta: {
-      title: 'North Lume Distribution | Product Distribution Across Canada, USA & Brazil',
-      description:
-        'North Lume Distribution - Your trusted partner in product distribution across Canada, USA, and Brazil.',
-    },
   },
   {
-    path: '/products',
+    path: 'products',
     name: 'products',
     component: () => import('./pages/ProductsPage.vue'),
-    meta: {
-      title: 'Our Products | North Lume Distribution',
-      description:
-        'Browse our full catalog of products across electronics, candy, snacks, toys, accessories, pet treats, and outdoor gear.',
-    },
   },
   {
-    path: '/contact',
+    path: 'contact',
     name: 'contact',
     component: () => import('./pages/ContactPage.vue'),
-    meta: {
-      title: 'Contact Us | North Lume Distribution',
-      description:
-        'Get in touch to learn how North Lume Distribution can support your product distribution needs across Canada, USA, and Brazil.',
-    },
   },
   {
-    path: '/privacy',
+    path: 'privacy',
     name: 'privacy',
     component: () => import('./pages/PrivacyPage.vue'),
-    meta: {
-      title: 'Privacy Policy | North Lume Distribution',
-      description:
-        'Learn how North Lume Distribution collects, uses, and protects your information.',
-    },
   },
   {
-    path: '/terms',
+    path: 'terms',
     name: 'terms',
     component: () => import('./pages/TermsPage.vue'),
-    meta: {
-      title: 'Terms of Service | North Lume Distribution',
-      description: 'Terms of Service for the North Lume Distribution website.',
-    },
+  },
+];
+
+const routes = [
+  {
+    path: '/:locale',
+    children: [
+      ...pageRoutes,
+      {
+        path: ':pathMatch(.*)*',
+        name: 'NotFound',
+        component: () => import('./pages/NotFoundPage.vue'),
+      },
+    ],
+  },
+  {
+    path: '/',
+    redirect: `/${DEFAULT_LOCALE}/`,
   },
   {
     path: '/:pathMatch(.*)*',
-    name: 'NotFound',
-    component: () => import('./pages/NotFoundPage.vue'),
-    meta: {
-      title: '404 — Page Not Found | North Lume Distribution',
-    },
+    redirect: (to) => `/${DEFAULT_LOCALE}${to.fullPath}`,
   },
 ];
 
@@ -79,6 +70,19 @@ const router = createRouter({
   },
 });
 
+// ── Locale guard ──────────────────────────────────────────────────────────
+router.beforeEach((to) => {
+  const locale = to.params.locale;
+
+  if (!SUPPORTED_LOCALES.includes(locale)) {
+    return `/${DEFAULT_LOCALE}${to.fullPath}`;
+  }
+
+  i18n.global.locale.value = locale;
+  document.documentElement.lang = locale === 'pt-br' ? 'pt-BR' : locale;
+});
+
+// ── SEO meta helpers ──────────────────────────────────────────────────────
 function setMeta(name, content, attr = 'name') {
   let el = document.querySelector(`meta[${attr}="${name}"]`);
   if (!el) {
@@ -89,17 +93,45 @@ function setMeta(name, content, attr = 'name') {
   el.setAttribute('content', content);
 }
 
+function updateHreflangTags(to) {
+  document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
+
+  const pathWithoutLocale = to.fullPath.replace(/^\/(en|fr|pt-br)/, '') || '/';
+
+  for (const loc of SUPPORTED_LOCALES) {
+    const link = document.createElement('link');
+    link.rel = 'alternate';
+    link.hreflang = loc;
+    link.href = `${SITE_URL}/${loc}${pathWithoutLocale}`;
+    document.head.appendChild(link);
+  }
+
+  const xDefault = document.createElement('link');
+  xDefault.rel = 'alternate';
+  xDefault.hreflang = 'x-default';
+  xDefault.href = `${SITE_URL}/${DEFAULT_LOCALE}${pathWithoutLocale}`;
+  document.head.appendChild(xDefault);
+}
+
+// ── After each navigation: update meta, canonical, hreflang, OG, GA4 ────
 router.afterEach((to) => {
-  const { title, description } = to.meta;
-  const url = `${SITE_URL}${to.fullPath}`;
+  const locale = to.params.locale || DEFAULT_LOCALE;
+  const routeName = to.name || 'home';
+  const t = i18n.global.t;
 
-  document.title = title || 'North Lume Distribution';
+  // Page title & description
+  const titleKey = `seo.${routeName}_title`;
+  const descKey = `seo.${routeName}_description`;
+  const title = t(titleKey) !== titleKey ? t(titleKey) : 'North Lume Distribution';
+  const description = t(descKey) !== descKey ? t(descKey) : '';
 
+  document.title = title;
   if (description) {
     setMeta('description', description);
   }
 
   // Canonical URL
+  const url = `${SITE_URL}${to.fullPath}`;
   let canonical = document.querySelector('link[rel="canonical"]');
   if (!canonical) {
     canonical = document.createElement('link');
@@ -110,10 +142,16 @@ router.afterEach((to) => {
 
   // Open Graph
   setMeta('og:url', url, 'property');
-  setMeta('og:title', title || 'North Lume Distribution', 'property');
+  setMeta('og:title', title, 'property');
   if (description) {
     setMeta('og:description', description, 'property');
   }
+
+  const ogLocaleMap = { en: 'en_US', fr: 'fr_CA', 'pt-br': 'pt_BR' };
+  setMeta('og:locale', ogLocaleMap[locale] || 'en_US', 'property');
+
+  // Hreflang
+  updateHreflangTags(to);
 
   // GA4 virtual pageview
   if (typeof window.gtag === 'function') {
@@ -126,5 +164,6 @@ router.afterEach((to) => {
 });
 
 const app = createApp(App);
+app.use(i18n);
 app.use(router);
 app.mount('#app');

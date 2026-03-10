@@ -1,0 +1,189 @@
+{
+  "common": {
+    "skip_to_content": "Passer au contenu principal"
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "contact": "Contact"
+  },
+  "footer": {
+    "products": "Produits",
+    "contact": "Contact",
+    "privacy": "Politique de confidentialit\u00e9",
+    "terms": "Conditions d\u2019utilisation",
+    "copyright": "North Lume Distribution. Tous droits r\u00e9serv\u00e9s."
+  },
+  "hero": {
+    "title": "Distribution de produits fiable au Canada, aux \u00c9tats-Unis et au Br\u00e9sil",
+    "subtitle": "Avec plus de 8 ans d\u2019exp\u00e9rience, North Lume Distribution fournit des produits de haute qualit\u00e9 aux stations-service, d\u00e9panneurs, supermarch\u00e9s et commerces de d\u00e9tail. Nous g\u00e9rons la logistique pour que vous puissiez vous concentrer sur la croissance de votre entreprise.",
+    "cta_primary": "Nous contacter",
+    "cta_secondary": "Voir les produits"
+  },
+  "about": {
+    "title": "Qui nous sommes",
+    "p1": "Nous travaillons directement avec les marques et les fabricants pour offrir une s\u00e9lection de produits au march\u00e9 de d\u00e9tail. De l\u2019\u00e9lectronique et des collations aux jouets et accessoires, notre catalogue couvre sept cat\u00e9gories \u2014 en stock et pr\u00eat \u00e0 exp\u00e9dier.",
+    "p2": "Que vous soyez une marque en croissance cherchant une plus grande port\u00e9e ou un d\u00e9taillant \u00e0 la recherche d\u2019un partenaire d\u2019approvisionnement fiable, nous adaptons notre approche \u00e0 votre entreprise. Prix comp\u00e9titifs, inventaire constant et soutien personnalis\u00e9 inclus."
+  },
+  "stats": {
+    "years": "Ann\u00e9es d\u2019exp\u00e9rience",
+    "products": "Produits distribu\u00e9s",
+    "countries": "Pays desservis",
+    "categories": "Cat\u00e9gories de produits"
+  },
+  "featured": {
+    "title": "Produits vedettes",
+    "subtitle": "Un aper\u00e7u des marques que nous distribuons.",
+    "view_all": "Voir tous les produits"
+  },
+  "contact_cta": {
+    "title": "Pr\u00eat \u00e0 passer commande\u00a0?",
+    "subtitle": "Dites-nous ce que vous cherchez \u2014 on s\u2019occupe du reste.",
+    "button": "Nous contacter"
+  },
+  "products_page": {
+    "title": "Nos produits",
+    "subtitle": "North Lume Distribution offre une vaste gamme de produits dans plusieurs cat\u00e9gories. Parcourez notre catalogue pour d\u00e9couvrir ce que nous pouvons mettre sur vos tablettes.",
+    "search_placeholder": "Rechercher des produits, marques, cat\u00e9gories...",
+    "all_categories": "Toutes les cat\u00e9gories",
+    "all_brands": "Toutes les marques",
+    "brand_found": "{count} marque trouv\u00e9e",
+    "brands_found": "{count} marques trouv\u00e9es",
+    "clear_all": "Tout effacer",
+    "no_results": "Aucun produit trouv\u00e9",
+    "no_results_hint": "Essayez d\u2019ajuster votre recherche ou vos filtres.",
+    "clear_filters": "Effacer tous les filtres"
+  },
+  "contact_page": {
+    "title": "Nous contacter",
+    "subtitle": "Vous cherchez un partenaire de distribution au Canada, aux \u00c9tats-Unis ou au Br\u00e9sil\u00a0? Parlez-nous de votre entreprise et nous vous r\u00e9pondrons.",
+    "email_label": "Courriel",
+    "form_name": "Nom",
+    "form_email": "Courriel",
+    "form_phone": "T\u00e9l\u00e9phone",
+    "form_phone_optional": "(facultatif)",
+    "form_message": "Message",
+    "form_submit": "Envoyer le message",
+    "form_submitting": "Envoi en cours...",
+    "success_title": "Message envoy\u00e9\u00a0!",
+    "success_body": "Merci de nous avoir contact\u00e9s. Nous vous r\u00e9pondrons sous peu.",
+    "success_reset": "Envoyer un autre message",
+    "error_generic": "Une erreur est survenue. Veuillez r\u00e9essayer.",
+    "error_network": "Erreur r\u00e9seau. V\u00e9rifiez votre connexion et r\u00e9essayez."
+  },
+  "not_found": {
+    "title": "Page introuvable",
+    "body": "D\u00e9sol\u00e9, nous n\u2019avons pas trouv\u00e9 la page que vous cherchez.",
+    "go_home": "Retour \u00e0 l\u2019accueil",
+    "view_products": "Voir les produits"
+  },
+  "cookie_consent": {
+    "message": "Nous utilisons des cookies et Google Analytics pour comprendre comment les visiteurs utilisent notre site. Aucune donn\u00e9e personnelle n\u2019est vendue ou partag\u00e9e.",
+    "privacy_link": "Politique de confidentialit\u00e9",
+    "decline": "Refuser",
+    "accept": "Accepter"
+  },
+  "lightbox": {
+    "close": "Fermer",
+    "previous": "Image pr\u00e9c\u00e9dente",
+    "next": "Image suivante"
+  },
+  "legal": {
+    "privacy_title": "Politique de confidentialit\u00e9",
+    "terms_title": "Conditions d\u2019utilisation",
+    "last_updated": "Derni\u00e8re mise \u00e0 jour\u00a0: 9 mars 2026"
+  },
+  "categories": {
+    "electronics-tech": "\u00c9lectronique et technologie",
+    "candy-confections": "Bonbons et confiseries",
+    "food-snacks": "Aliments et collations",
+    "toys-novelties": "Jouets et nouveaut\u00e9s",
+    "accessories": "Accessoires",
+    "pet": "Animaux",
+    "outdoor": "Plein air"
+  },
+  "brands": {
+    "volt": {
+      "description": "C\u00e2bles, \u00e9couteurs, cordons auxiliaires et chargeurs haut de gamme Volt Elite V3. C\u00e2bles de charge rapide Volt Evolution 4-en-1 Tuff en 4, 6 et 10 pieds."
+    },
+    "tech-361": {
+      "description": "Pr\u00e9sentoir de comptoir de 36 pi\u00e8ces avec c\u00e2bles Type C, iPhone tress\u00e9s, Micro USB tress\u00e9s, chargeurs muraux et de voiture."
+    },
+    "sour-rockstar": {
+      "description": "Bonbon liquide acidul\u00e9 \u00e0 rouleau, 75 ml par pi\u00e8ce. 12 pi\u00e8ces par pr\u00e9sentoir, 8 pr\u00e9sentoirs par caisse."
+    },
+    "gorilla-squeeze": {
+      "description": "Bonbon gel acidul\u00e9 en Blue Razz et fraise. Emballage double saveur de 56 ml."
+    },
+    "tnt-sour-stix": {
+      "description": "B\u00e2tonnets de bonbons acidul\u00e9s explosifs en plusieurs saveurs."
+    },
+    "squeeze-team-heroes": {
+      "description": "Bonbons compressibles th\u00e9matiques de super-h\u00e9ros pour enfants."
+    },
+    "cheeky-monkey": {
+      "description": "C\u00f4nes de bonbons g\u00e9lifi\u00e9s et acidul\u00e9s en saveurs assorties. Pr\u00e9sentoir de sol de 96 pi\u00e8ces."
+    },
+    "zaks-jerky": {
+      "description": "Jerky de b\u0153uf Black Angus haut de gamme. Format traditionnel de 120 g en quatre saveurs audacieuses plus vari\u00e9t\u00e9s Grand Sac de 120 g."
+    },
+    "the-butcher": {
+      "description": "Jerky de b\u0153uf de 90 g fabriqu\u00e9 localement en Original, Teriyaki, Piquant-Sucr\u00e9 et Fum\u00e9 Hickory. Pr\u00e9sentoir de 80 pi\u00e8ces."
+    },
+    "kokum": {
+      "description": "Jerky de b\u0153uf Kokum, propri\u00e9t\u00e9 autochtone, en formats de 75 g et 175 g."
+    },
+    "die-cast-cars": {
+      "description": "Voitures miniatures moul\u00e9es sous pression avec logos officiels, pneus en caoutchouc, m\u00e9canisme de recul et portes ouvrantes. Plus de 150 mod\u00e8les."
+    },
+    "3d-minis-creatures": {
+      "description": "Mini figurines 3D de collection et jouets cr\u00e9atures articul\u00e9es. Pr\u00e9sentoir de sol de 110 pi\u00e8ces."
+    },
+    "warp-worm": {
+      "description": "Jouets fantaisie et articles fidget Warp Worm."
+    },
+    "charm-buddies": {
+      "description": "Breloques de sac de collection sur pr\u00e9sentoir rotatif de comptoir de 96 pi\u00e8ces."
+    },
+    "cool-tats": {
+      "description": "Tatouages temporaires en formats complet, moiti\u00e9 et petit. Pr\u00e9sentoir de sol de 120 pi\u00e8ces avec plus de 100 designs."
+    },
+    "sticker-kraze": {
+      "description": "Autocollants en bambou v\u00e9ritable. Style vintage unique, 2 \u00e0 3 pouces. Pr\u00e9sentoir de comptoir de 120 pi\u00e8ces."
+    },
+    "bag-swag": {
+      "description": "Accessoires de sac tendance et d\u00e9coratifs."
+    },
+    "keysteez": {
+      "description": "Porte-cl\u00e9s et accessoires \u00e9l\u00e9gants."
+    },
+    "retro-rattlers": {
+      "description": "Lunettes de soleil r\u00e9tro avec lentilles revo \u00e0 changement de couleur et branches ajustables. Pr\u00e9sentoir de sol de 48 pi\u00e8ces."
+    },
+    "fancy-fannys": {
+      "description": "Sacs banane et sacs de taille \u00e9l\u00e9gants."
+    },
+    "card-guard": {
+      "description": "Porte-cartes protecteurs et portefeuilles anti-RFID."
+    },
+    "bones": {
+      "description": "Friandises premium naturelles pour animaux\u00a0: b\u00e2tons de bully, trach\u00e9e de b\u0153uf, b\u00e2tons de b\u0153uf, b\u0153uf tress\u00e9, oreilles de vache et oreilles de porc. Pr\u00e9sentoir de 210 pi\u00e8ces."
+    },
+    "campers": {
+      "description": "B\u00e2tons de r\u00f4tissage pour feu de camp de 34 pouces en acier torsad\u00e9 calibre 10 avec manches en bois. Pr\u00e9sentoir de 55 pi\u00e8ces."
+    }
+  },
+  "seo": {
+    "home_title": "North Lume Distribution | Distribution de produits au Canada, aux \u00c9tats-Unis et au Br\u00e9sil",
+    "home_description": "North Lume Distribution fournit plus de 23 produits dans sept cat\u00e9gories aux d\u00e9taillants au Canada, aux \u00c9tats-Unis et au Br\u00e9sil.",
+    "products_title": "Nos produits | North Lume Distribution",
+    "products_description": "Parcourez notre catalogue complet \u2014 \u00e9lectronique, bonbons, collations, jouets, accessoires, friandises pour animaux et \u00e9quipement de plein air de plus de 23 marques.",
+    "contact_title": "Nous contacter | North Lume Distribution",
+    "contact_description": "Communiquez avec nous pour d\u00e9buter un partenariat de gros ou poser des questions sur nos gammes de produits.",
+    "privacy_title": "Politique de confidentialit\u00e9 | North Lume Distribution",
+    "privacy_description": "D\u00e9couvrez comment North Lume Distribution recueille, utilise et prot\u00e8ge vos renseignements.",
+    "terms_title": "Conditions d\u2019utilisation | North Lume Distribution",
+    "terms_description": "Conditions d\u2019utilisation du site Web de North Lume Distribution.",
+    "not_found_title": "404 \u2014 Page introuvable | North Lume Distribution"
+  }
+}
