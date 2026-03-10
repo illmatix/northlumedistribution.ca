@@ -17,6 +17,7 @@
           :key="brand.slug"
           :to="`/products#${brand.slug}`"
           class="group rounded-2xl border border-gray-200 bg-white transition-shadow hover:shadow-lg"
+          @click="trackEvent('featured_product_click', { brand_name: brand.name, category: brand.category })"
         >
           <div class="overflow-hidden rounded-t-2xl">
             <img
@@ -49,6 +50,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useScrollReveal } from '@/composables/useScrollReveal'
+import { trackEvent } from '@/composables/useAnalytics'
 import brandsData from '@/data/brands.json'
 
 const sectionRef = ref(null)

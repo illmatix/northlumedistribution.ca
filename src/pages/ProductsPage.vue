@@ -165,9 +165,10 @@
 </template>
 
 <script setup>
-import { reactive, ref, computed, onMounted } from 'vue'
+import { reactive, ref, computed, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import brandsData from '@/data/brands.json'
+import { trackEvent } from '@/composables/useAnalytics'
 import CatalogImage from '@/components/products/CatalogImage.vue'
 import ImageLightbox from '@/components/products/ImageLightbox.vue'
 import { useJsonLd } from '@/composables/useJsonLd'
@@ -229,6 +230,8 @@ function selectCategory(slug) {
   } else {
     activeCategory.value = slug
     activeBrand.value = null
+    const cat = brandsData.categories.find((c) => c.slug === slug)
+    if (cat) trackEvent('category_filter', { category: cat.name })
   }
 }
 
@@ -297,6 +300,7 @@ function openLightbox(brand, index) {
   lightbox.src = brand.pages[index].src
   lightbox.alt = brand.pages[index].alt
   lightbox.open = true
+  trackEvent('product_image_view', { brand_name: brand.name })
 }
 
 function closeLightbox() {
@@ -314,6 +318,18 @@ function nextImage() {
   lightbox.src = lightbox.pages[lightbox.index].src
   lightbox.alt = lightbox.pages[lightbox.index].alt
 }
+
+// ── Search tracking (debounced) ──────────────────────────────────────────
+let searchTimeout = null
+watch(search, (val) => {
+  clearTimeout(searchTimeout)
+  const q = val.trim()
+  if (q.length >= 2) {
+    searchTimeout = setTimeout(() => {
+      trackEvent('product_search', { search_term: q })
+    }, 1000)
+  }
+})
 
 // ── Hash anchor scroll + search query param ─────────────────────────────
 onMounted(() => {

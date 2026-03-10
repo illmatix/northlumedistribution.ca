@@ -28,7 +28,11 @@
               </svg>
             </dt>
             <dd>
-              <a class="hover:text-brand-600" href="mailto:hello@northlumedistribution.ca">
+              <a
+                class="hover:text-brand-600"
+                href="mailto:hello@northlumedistribution.ca"
+                @click="trackEvent('email_click', { location: 'contact_page' })"
+              >
                 hello@northlumedistribution.ca
               </a>
             </dd>
@@ -72,7 +76,7 @@
         </div>
 
         <!-- Form -->
-        <form v-else class="space-y-6" @submit.prevent="submitForm">
+        <form v-else class="space-y-6" @submit.prevent="submitForm" @focusin="onFormFocus">
           <!-- Error banner -->
           <div
             v-if="formState === 'error'"
@@ -177,12 +181,21 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import { useJsonLd } from '@/composables/useJsonLd'
+import { trackEvent } from '@/composables/useAnalytics'
 
 const WEB3FORMS_KEY = 'afda8128-785c-42ec-82d7-a9726ba8d835'
 
 const formState = ref('idle')
 const errorMessage = ref('')
 const form = reactive({ name: '', email: '', phone: '', message: '' })
+const formStarted = ref(false)
+
+function onFormFocus() {
+  if (!formStarted.value) {
+    formStarted.value = true
+    trackEvent('form_start', { event_label: 'contact_form' })
+  }
+}
 
 async function submitForm() {
   formState.value = 'submitting'
@@ -206,12 +219,10 @@ async function submitForm() {
 
     if (data.success) {
       formState.value = 'success'
-      if (typeof window.gtag === 'function') {
-        window.gtag('event', 'form_submission', {
-          event_category: 'contact',
-          event_label: 'contact_form',
-        })
-      }
+      trackEvent('form_submission', {
+        event_category: 'contact',
+        event_label: 'contact_form',
+      })
     } else {
       formState.value = 'error'
       errorMessage.value = data.message || 'Something went wrong. Please try again.'

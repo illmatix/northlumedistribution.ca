@@ -31,12 +31,14 @@
           <router-link
             to="/contact"
             class="rounded-md bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-400"
+            @click="trackCta('get_in_touch')"
           >
             Get in Touch
           </router-link>
           <router-link
             to="/products"
             class="text-sm font-semibold leading-6 text-brand-200 transition-colors hover:text-white"
+            @click="trackCta('view_products')"
           >
             View Products <span aria-hidden="true">&rarr;</span>
           </router-link>
@@ -49,9 +51,14 @@
 <script setup>
 import { ref } from 'vue';
 import { useScrollReveal } from '@/composables/useScrollReveal';
+import { trackEvent } from '@/composables/useAnalytics';
 
 const sectionRef = ref(null);
 useScrollReveal(sectionRef, { threshold: 0.1 });
+
+function trackCta(label) {
+  trackEvent('cta_click', { event_label: label, location: 'hero' });
+}
 
 const dotPattern = `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='12' cy='12' r='1.5' fill='%2314b8a6'/%3E%3C/svg%3E")`;
 </script>
